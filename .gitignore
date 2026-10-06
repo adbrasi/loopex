@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+node_modules/
+dist/
+build/
+.vscode/
+*.egg-info/
+# Sample videos dropped in the repo root for local testing.
+/*.mp4

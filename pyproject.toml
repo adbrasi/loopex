@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loopex"
+version = "0.1.0"
+description = "Find seamless loops in videos."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26"]
+
+[project.scripts]
+loopex = "loopex.__main__:main"
+
+[tool.setuptools]
+packages = ["loopex"]
