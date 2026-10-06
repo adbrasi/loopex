@@ -10,3 +10,4 @@ build/
 *.egg-info/
 # Sample videos dropped in the repo root for local testing.
 /*.mp4
+/output/

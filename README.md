@@ -3,15 +3,23 @@
 Finds seamless loops in videos. One command, no tuning: no minimum length, no
 thresholds, no modes.
 
-```bash
-pip install -e .            # needs ffmpeg/ffprobe on PATH
+Install (Python 3.10+, FFmpeg with `ffmpeg` and `ffprobe` on PATH):
 
+```bash
+sudo apt install ffmpeg                                  # or your platform's FFmpeg
+pip install git+<this repository's URL>                  # or: pip install /path/to/loopex
+```
+
+Use:
+
+```bash
 loopex video.mp4            # the best loop
 loopex video.mp4 --all      # the best loop of every repeating part (e.g. idle, walk, attack)
 loopex video.mp4 -o out/    # also write each loop as a frame-exact H.264 clip
 ```
 
-Output (exit code 1 when no loop is found):
+Output on stdout. Exit code 0 when loops were found, 1 when none, 2 on errors
+(missing file, unreadable video, FFmpeg not installed) with the reason on stderr.
 
 ```json
 {
